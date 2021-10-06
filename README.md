@@ -72,9 +72,12 @@ cork_city.stock
 # 9780553283686, Copies: 0, Available: 0
 ```
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-Setup
+##Setup
+-----------
 1.clone the git code
+
 2.import to eclipse
+
 ![image](https://user-images.githubusercontent.com/7882959/136127231-b6c60fe2-a1f7-4d01-b962-127a423bfab8.png)
 
 3.add a server ( i used tomcat 8.5)
@@ -85,7 +88,27 @@ Setup
 5.  open the URL http://localhost:8080/LM/ in any browser(note the server of port )
 ![image](https://user-images.githubusercontent.com/7882959/136127491-e2b1934d-7123-45db-bf40-f33c44020944.png)
 
-7.  
-8.  
+#Unit Test 
+----------
+1.add 100 stock to the first book
+
+![image](https://user-images.githubusercontent.com/7882959/136127781-00497b90-7893-4a7c-8a91-9601fb249fa0.png)
+![image](https://user-images.githubusercontent.com/7882959/136127833-ff6aa3de-5191-42e8-9c4f-b995c0b84811.png)
+
+2.borrow the book (click borrow button next to book listed)
+![image](https://user-images.githubusercontent.com/7882959/136127833-ff6aa3de-5191-42e8-9c4f-b995c0b84811.png)
+![image](https://user-images.githubusercontent.com/7882959/136127975-82a19e68-4c76-4742-a7c3-5b4d655e760c.png)
+
+3.return the book (click return button )
+![image](https://user-images.githubusercontent.com/7882959/136127975-82a19e68-4c76-4742-a7c3-5b4d655e760c.png)
+![image](https://user-images.githubusercontent.com/7882959/136128094-aca6ffa9-7c1d-4645-9984-90dab49325aa.png)
+ 4. Add new book (click new book button above the table) you can save or delete the record
+ ![image](https://user-images.githubusercontent.com/7882959/136128174-b520c499-29c4-4803-a5ab-57bf0de1bfcf.png)
+![image](https://user-images.githubusercontent.com/7882959/136128324-18704cd9-90fc-43d0-8d68-c85f34e2fc6e.png)
+![image](https://user-images.githubusercontent.com/7882959/136128366-e7f7cd2f-c5f1-4971-aa5d-f8bd0e6687b8.png)
+
+
+
+
 
 
