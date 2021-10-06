@@ -71,3 +71,21 @@ cork_city.stock
 # 9781857231380, Copies: 0, Available: 0
 # 9780553283686, Copies: 0, Available: 0
 ```
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Setup
+1.clone the git code
+2.import to eclipse
+![image](https://user-images.githubusercontent.com/7882959/136127231-b6c60fe2-a1f7-4d01-b962-127a423bfab8.png)
+
+3.add a server ( i used tomcat 8.5)
+![image](https://user-images.githubusercontent.com/7882959/136127266-5d35ab62-142a-44c0-95f5-b622f11d494f.png)
+
+4.build and run the project
+![image](https://user-images.githubusercontent.com/7882959/136127340-47f28b1f-5b18-47c1-a605-157ebf10fbe1.png)
+5.  open the URL http://localhost:8080/LM/ in any browser(note the server of port )
+![image](https://user-images.githubusercontent.com/7882959/136127491-e2b1934d-7123-45db-bf40-f33c44020944.png)
+
+7.  
+8.  
+
+
