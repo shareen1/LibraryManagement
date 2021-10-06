@@ -51,13 +51,13 @@ function addNewBook(button) {
 	var oldRow = document.getElementById("searchOutput");
 	var newRow = document.createElement("tr");
 	newRow.innerHTML = "<tr id='newRow'>" +
-			"<td> <div style='margin-right: 3px;'><input type='text' style='width:100%;' required></div></td>" +
-			"<td> <div style='margin-right: 3px;'><input type='text' style='width:100%;'></div></td>" +
-			"<td> <div style='margin-right: 3px;'><input type='text' style='width:100%;'></div></td>" +
-			"<td> <div style='margin-right: 3px;'><input type='text' style='width:100%;'></div></td>" +
+			"<td> <div style='margin-right: 3px;'><input type='text' name='username' required /></div></td>" +
+			"<td> <div style='margin-right: 3px;'><input type='text' style='width:100%;' /></div></td>" +
+			"<td> <div style='margin-right: 3px;'><input type='text' style='width:100%;'/></div></td>" +
+			"<td> <div style='margin-right: 3px;'><input type='text' style='width:100%;'/></div></td>" +
 			"<td> <div style='margin-right: 3px;'><input type='number' min='1' max='100' value='1' ></div></td>" +
 			"<td> <div style='margin-right: 3px;'>&nbsp;</div></td>" +
-			"<td><button id = 'movieAdded' type='button' style='display:inline-block' onclick=saveRow(this)> <img src='img/save.png' width='25' height='25' style='float:left;margin-right:0.5em'></mg>Save</button>" +
+			"<td><button id = 'movieAdded' type='submit' style='display:inline-block' onclick=saveRow(this)> <img src='img/save.png' width='25' height='25' style='float:left;margin-right:0.5em'></mg>Save</button>" +
 			"<button id = 'movieAdded' type='button' style='display:inline-block' onclick=deleteRow(this)> <img src='img/delete.png' width='25' height='25' style='float:left;margin-right:0.5em'></mg>Delete</button> </td>" +
 
 			"</tr>";
@@ -65,11 +65,11 @@ function addNewBook(button) {
 	
 }
 function buildtable(button, type) {
-	var isdn = button.parentNode.parentNode.parentNode.firstElementChild.innerText;
+	var rowIndex = button.parentNode.parentNode.parentNode.rowIndex;
+	rowIndex=rowIndex-1;
 	var tabletext = button.parentNode.parentNode.parentNode.parentNode.innerText
 			.replaceAll("Borrow\n", "").replaceAll("\t\nAdd Stock\n", "")
 			.replaceAll("Return\n"  , "").replaceAll("Return" ,"").split("\n")
-	var flag = false;
 	var data = "";
 	var index = 0;
 	var numberval=button.parentNode.parentNode.firstElementChild.firstElementChild.value;
@@ -77,11 +77,7 @@ function buildtable(button, type) {
 		var celltext = tabletext[j].split("\t");
 
 		for (i = 0; i < celltext.length; i++) {
-			if (celltext[0] == isdn && i == 0) {
-				flag = true;
-				data += celltext[i];
-
-			} else if (flag == true && i == 5) {
+			 if (rowIndex==j && i == 5) {
 				if (type == 'B') {
 					var available = celltext[i] - 1;
 					if (available < 0) {
@@ -111,7 +107,7 @@ function buildtable(button, type) {
 				celltext[i] = available;
 				data += celltext[i];
 			} else {
-				if (flag == true && type == 'AS' && i==4) {
+				if (rowIndex==j && type == 'AS' && i==4) {
 					celltext[i] = parseInt(celltext[i]) +  parseInt(numberval);	
 				}
 
@@ -124,7 +120,6 @@ function buildtable(button, type) {
 
 		}
 		index = index + 1;
-		flag = false;
 		if (j !== tabletext.length - 1) {
 			data += "\n";
 		}
