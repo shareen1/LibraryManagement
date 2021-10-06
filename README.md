@@ -74,28 +74,30 @@ cork_city.stock
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ##Setup
 -----------
-1.clone the git code
+1.Clone the git code LibraryManagement
 
-2.import to eclipse
+2.Import Java source code of LibraryManagement
+ into Eclipse
 
 ![image](https://user-images.githubusercontent.com/7882959/136127231-b6c60fe2-a1f7-4d01-b962-127a423bfab8.png)
 
-3.add a server ( i used tomcat 8.5)
+3.add a server into Eclipse as shown ( i used tomcat 8.5 here)
 ![image](https://user-images.githubusercontent.com/7882959/136127266-5d35ab62-142a-44c0-95f5-b622f11d494f.png)
 
-4.build and run the project
+4.Build and run the project LibraryManagement, once it is running
 ![image](https://user-images.githubusercontent.com/7882959/136127340-47f28b1f-5b18-47c1-a605-157ebf10fbe1.png)
-5.  open the URL http://localhost:8080/LM/ in any browser(note the server of port )
+
+5.  open the URL http://localhost:8080/LM/ in chrome(note the server of port )
 ![image](https://user-images.githubusercontent.com/7882959/136127491-e2b1934d-7123-45db-bf40-f33c44020944.png)
 
 #Unit Test 
 ----------
-1.add 100 stock to the first book
+1.add 100 stock to the first one
 
 ![image](https://user-images.githubusercontent.com/7882959/136127781-00497b90-7893-4a7c-8a91-9601fb249fa0.png)
 ![image](https://user-images.githubusercontent.com/7882959/136127833-ff6aa3de-5191-42e8-9c4f-b995c0b84811.png)
 
-2.borrow the book (click borrow button next to book listed)
+2.borrow one book from first one (click borrow button next to book listed)
 
 ![image](https://user-images.githubusercontent.com/7882959/136127833-ff6aa3de-5191-42e8-9c4f-b995c0b84811.png)
 ![image](https://user-images.githubusercontent.com/7882959/136127975-82a19e68-4c76-4742-a7c3-5b4d655e760c.png)
